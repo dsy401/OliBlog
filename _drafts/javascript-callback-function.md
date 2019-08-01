@@ -1,0 +1,10 @@
+---
+layout: post_layout
+title:
+time:
+location: Auckland
+pulished: true
+excerpt_separator: '```'
+---
+
+a
