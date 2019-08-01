@@ -9,7 +9,9 @@ excerpt_separator: '```'
 
 Here are a few concepts introduced firstly.
 
-\#\#\#\*Function is also an object To understand the callback function, first understand the rules of the function clearly. In javascript, the function is strange, but it is really an object. Specifically, a function is a Function object created with the Function() constructor. The function object contains a string containing the javascript code of the function. If you are transferring from C or Java, this may seem strange, how can the code be a string? But for javascript, this is very common. The difference between data and code is very vague.
+### **Function is also an object **
+
+To understand the callback function, first understand the rules of the function clearly. In javascript, the function is strange, but it is really an object. Specifically, a function is a Function object created with the Function() constructor. The function object contains a string containing the javascript code of the function. If you are transferring from C or Java, this may seem strange, how can the code be a string? But for javascript, this is very common. The difference between data and code is very vague.
 
 ~~~javascript
 var fn = new Function("arg1", "arg2", "return arg1 * arg2;");
@@ -18,7 +20,7 @@ fn(3, 7); // return 3*7=21
 
 One benefit of this is that you can pass code to other functions, or you can pass regular variables or objects (because the code is literally just an object).
 
-\#\#\#\*Deliver function as callback
+### Deliver function as callback
 
 ~~~javascript
 function fn(arg1, arg2, callback){
