@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: JavaScript Callback Function
-time: 2019-08-02 Friday
+time:
 location: Auckland
 pulished: true
 excerpt_separator: '```'
@@ -9,7 +9,7 @@ excerpt_separator: '```'
 
 Here are a few concepts introduced firstly.
 
-### **Function is also an object **
+### Function is also an object
 
 To understand the callback function, first understand the rules of the function clearly. In javascript, the function is strange, but it is really an object. Specifically, a function is a Function object created with the Function() constructor. The function object contains a string containing the javascript code of the function. If you are transferring from C or Java, this may seem strange, how can the code be a string? But for javascript, this is very common. The difference between data and code is very vague.
 
