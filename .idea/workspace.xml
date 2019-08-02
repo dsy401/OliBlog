@@ -12,15 +12,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2019-08-02-getting-started.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="270">
-                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+                <caret line="17" selection-start-line="17" selection-end-line="17" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -45,6 +54,7 @@
         <option value="$PROJECT_DIR$/_drafts/javascript-callback-function.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2019-08-02-javascript-callback-function.md" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -59,6 +69,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,7 +97,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -122,11 +132,12 @@
       <workItem from="1564675455856" duration="179000" />
       <workItem from="1564676013667" duration="1843000" />
       <workItem from="1564708828016" duration="266000" />
+      <workItem from="1564709174639" duration="70000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3420000" />
+    <option name="totallyTimeSpent" value="3490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2083" y="113" width="1472" height="901" extended-state="0" />
@@ -144,7 +155,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32880098" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32880098" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -181,9 +192,6 @@
           <caret line="126" column="23" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-04-12-Publish-Kotlin-Lib-To-Jcenter.md" />
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -248,9 +256,7 @@
     <entry file="file://$PROJECT_DIR$/_site/2019/08/01/dsa.html" />
     <entry file="file://$PROJECT_DIR$/_site/2019/08/01/我.html" />
     <entry file="file://$PROJECT_DIR$/_site/2016/03/04/Getting-Started.html" />
-    <entry file="file://$PROJECT_DIR$/_site/2019/08/01/getting-started.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/2019/08/01/getting-started.html" />
     <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -269,16 +275,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_site/2019/08/02/sad.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/2019/08/02/sad.html" />
     <entry file="file://$PROJECT_DIR$/_posts/2019-08-02-getting-started.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="270">
-            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <caret line="17" selection-start-line="17" selection-end-line="17" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
