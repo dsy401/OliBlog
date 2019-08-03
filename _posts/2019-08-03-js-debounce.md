@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: JS Debounce
-time:
+time: 2019-08-03 Saturday
 location: Auckland
 pulished: true
 excerpt_separator: '```'
