@@ -52,7 +52,7 @@ languages:
     proficiency: Native
   - language2:
     name: English
-    proficiency: Limit
+    proficiency: Good
 programmingSkills:
   - Python:
     name: JavaScript
