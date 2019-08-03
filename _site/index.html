@@ -72,46 +72,21 @@
         <p>
             <p>Here are a few concepts introduced firstly.</p>
 
-<p>###*Function is also an object To understand the callback function, first understand the rules of the function clearly. In javascript, the function is strange, but it is really an object. Specifically, a function is a Function object created with the Function() constructor. The function object contains a string containing the javascript code of the function. If you are transferring from C or Java, this may seem strange, how can the code be a string? But for javascript, this is very common. The difference between data and code is very vague.</p>
+<h3 id="function-is-also-an-object">Function is also an object</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">arg1</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">arg2</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return arg1 * arg2;</span><span class="dl">"</span><span class="p">);</span>
-<span class="nx">fn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// return 3*7=21</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>One benefit of this is that you can pass code to other functions, or you can pass regular variables or objects (because the code is literally just an object).</p>
-
-<p>###*Deliver function as callback</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
- <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">arg1</span> <span class="o">-</span> <span class="nx">arg2</span><span class="p">)</span> <span class="o">+</span> <span class="nx">arg2</span><span class="p">);</span>
- <span class="nx">callback</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="err">　　</span><span class="c1">//deliver result</span>
-<span class="p">}</span>
- <span class="nx">fn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
- <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Callback called! Num: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">num</span><span class="p">);</span> <span class="err">　</span><span class="c1">//result will be random number betwwen 10 and 20</span>
-<span class="p">});</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Maybe it seems cumbersome to do this, even stupid, why not return the results normally? But when you have to use a callback function, you probably don’t think so! Don’t block, traditional functions enter data as parameters and return values ​​using a return statement. In theory, there is a return return statement at the end of the function, which is structurally: an input point and an output point. It’s easier to understand that a function is essentially a mapping of the implementation process between input and output. However, when the implementation of the function is very long, do you choose to wait for the function to complete the processing, or use the callback function for asynchronous processing? In this case, it is important to use a callback function, such as an AJAX request. If you use the callback function for processing, the code can continue with other tasks without having to wait. In actual development, asynchronous calls are often used in javascript, and it is highly recommended here!</p>
-
+<p>To understand the callback function, first understand the rules of the function clearly. In javascript, the function is strange, but it is really an object. Specifically, a fun ...
         </p>
         <p class="readmore">
             <a href="/2019/08/02/javascript-callback-function.html">
-                阅读全文
+                View
                 <span class="glyphicon glyphicon-circle-arrow-right"></span>
             </a>
+
         </p>
     </section>
 
 </article>
+<hr/>
 
 <article class="preview">
     <header>
@@ -126,17 +101,19 @@
 
 <p>From now on, I will continue to update my own code and share my coding problem with you.</p>
 
-
+ ...
         </p>
         <p class="readmore">
             <a href="/2019/08/02/getting-started.html">
-                阅读全文
+                View
                 <span class="glyphicon glyphicon-circle-arrow-right"></span>
             </a>
+
         </p>
     </section>
 
 </article>
+<hr/>
 
 
     </main>
