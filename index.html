@@ -8,7 +8,7 @@ layout: blog_layout
         <h2 class="post-title">
             <a href="{{ post.url }}">  {{ post.title }} </a>
         </h2>
-        <p class="post-time"> {{ post.time }}</p>
+        <p class="post-time"> {{ post.date }}</p>
     </header>
     <section class="post-section">
         <p>
@@ -24,5 +24,6 @@ layout: blog_layout
     </section>
 
 </article>
-<hr/>
+
+<hr>
 {% endfor %}

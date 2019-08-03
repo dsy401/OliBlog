@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Getting Started</title>
-  <meta name="description" content="Getting Started with my own blog.From now on, I will continue to update my own code and share my coding problem with you.">
+  <title>JS Debounce</title>
+  <meta name="description" content="These days, i have created a scheduler for my school management system project, i have met the problem that evert time i click the next button to turn to nex...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/08/02/getting-started.html">
+  <link rel="canonical" href="http://localhost:4000/2019/08/03/js-debounce.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -59,7 +59,7 @@
 
         <main class="blogmain">
             <header>
-                <h1 class="article-title">Getting Started</h1>
+                <h1 class="article-title">JS Debounce</h1>
                 <p class="article-time">
                     ,  published in <span>Auckland</span>
                 </p>
@@ -67,13 +67,47 @@
                     If you have any question, you can me email <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>.
                 </p>
             </header>
-            <p>Getting Started with my own blog.</p>
+            <p>These days, i have created a scheduler for my school management system project, i have met the problem that evert time i click the next button to turn to next page, so the frontend will send AJAX request for every i clicked, which will course server overloading. So, i thought of the debounce to avoid this happen.</p>
 
-<p>From now on, I will continue to update my own code and share my coding problem with you.</p>
+<p>There is the debounce source code written by myself</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello Blog</span><span class="dl">"</span><span class="p">)</span>
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">debounce</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">timeout</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">//timeout: null</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">timeout</span><span class="p">){</span> <span class="c1">//if timeout is not null</span>
+        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timeout</span><span class="p">)</span> <span class="c1">//clear timeout to null</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">fn</span><span class="p">,</span><span class="nx">delay</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">timeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+            <span class="nx">fn</span><span class="p">()</span>
+        <span class="p">},</span> <span class="nx">delay</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>How to use it?</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">method</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">()</span>
+<span class="nx">method</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+    <span class="c1">//your work</span>
+<span class="p">},</span> <span class="mi">500</span><span class="p">)</span> <span class="c1">//your custom delay microseconds</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>When i use the debounce, each time i click the button to turn to the next pgae, the system will not Immediately send the AJAX request to server. The AJAX request will be sent After the click action stops for your custom delay (microseconds).</p>
 
             <footer class="article-footer">
     <div class="authorimage">

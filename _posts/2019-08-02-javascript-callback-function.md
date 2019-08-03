@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: JavaScript Callback Function
-time: 2019-08-02 Friday
+date: 2019-08-02
 location: Auckland
 pulished: true
 excerpt_separator: '```'
