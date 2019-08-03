@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a1ba280-6a7b-4bdb-a5b9-24b4a207964e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-08-js-debounce.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-08-js-debounce.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2019-05-23-stack.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-23-stack.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2019/08/02/getting-started.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2019/08/02/javascript-callback-function.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2019/08/03/js-debounce.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/menu.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,21 +16,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/post_layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2019-05-23-stack.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <first_editor relative-caret-position="400">
+                <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               </first_editor>
               <second_editor />
             </state>
@@ -156,12 +141,12 @@
       <workItem from="1564709541390" duration="90000" />
       <workItem from="1564791912150" duration="3594000" />
       <workItem from="1564809018945" duration="187000" />
-      <workItem from="1564841365948" duration="318000" />
+      <workItem from="1564841365948" duration="718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7753000" />
+    <option name="totallyTimeSpent" value="8153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1956" y="53" width="1472" height="901" extended-state="0" />
@@ -331,8 +316,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-05-23-stack.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <first_editor relative-caret-position="400">
+            <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           </first_editor>
           <second_editor />
         </state>
