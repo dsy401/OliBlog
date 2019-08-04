@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: 'C# Upload File/Delete File'
-date: 2019-05-25 00:00:00
+date: 2019-05-25 07:40:00
 location: Auckland
 pulished: true
 excerpt_separator: '```'
