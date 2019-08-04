@@ -8,9 +8,8 @@ excerpt_separator: '```'
 ---
 
 These days, i have created some restful api based on uploading someone's information including upload file or delete file from the cloud. So, i gonna share my method to upload or delete file from directory.
-{: .present-before-paste}
 
-```c#
+~~~csharp
 protected UploadFileModel UploadFile(IFormFile file,string folderName, int id,string strDateTime)
         {
             var model = new UploadFileModel();
@@ -24,7 +23,7 @@ protected UploadFileModel UploadFile(IFormFile file,string folderName, int id,st
                 {
                     file.CopyTo(stream);
                 }
-                
+
                 model.IsUploadSuccess = true;
                 model.ErrorMessage = "";
                 return model;
@@ -36,9 +35,9 @@ protected UploadFileModel UploadFile(IFormFile file,string folderName, int id,st
                 return model;
             }
         }
-```
+~~~
 
-```c#
+~~~csharp
 protected void DeleteFile(string filePath)
         {
             var folderName = Path.Combine("wwwroot", filePath);
@@ -51,4 +50,6 @@ protected void DeleteFile(string filePath)
                 throw new Exception("Delete Fail");
             }
         }
-```
+~~~
+
+These are Upload File/Delete File method written by myself, hope u guys can use it.
