@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a1ba280-6a7b-4bdb-a5b9-24b4a207964e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-23-stack.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-23-stack.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +17,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2019-05-23-stack.md">
+        <entry file="file://$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="295">
-                <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+              <first_editor relative-caret-position="325">
+                <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
               </first_editor>
               <second_editor />
             </state>
@@ -60,6 +60,7 @@
         <option value="$PROJECT_DIR$/_layouts/post_layout.html" />
         <option value="$PROJECT_DIR$/_posts/2019-05-08-js-debounce.md" />
         <option value="$PROJECT_DIR$/_posts/2019-05-23-stack.md" />
+        <option value="$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md" />
       </list>
     </option>
   </component>
@@ -74,13 +75,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -101,6 +106,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,18 +148,19 @@
       <workItem from="1564791912150" duration="3594000" />
       <workItem from="1564809018945" duration="187000" />
       <workItem from="1564841365948" duration="1018000" />
-      <workItem from="1564843507971" duration="247000" />
+      <workItem from="1564843507971" duration="262000" />
+      <workItem from="1564880124285" duration="308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8700000" />
+    <option name="totallyTimeSpent" value="9023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1956" y="53" width="1472" height="901" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2083916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23986015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -317,8 +324,18 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-05-23-stack.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="295">
-            <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+          <first_editor relative-caret-position="310">
+            <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="325">
+            <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
           </first_editor>
           <second_editor />
         </state>
