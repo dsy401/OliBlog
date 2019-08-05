@@ -16,3 +16,32 @@ Here to talk about the more important PhantomJS, PhantomJS is a WebKit-based ser
 &nbsp;
 
 **Declare browser object**
+```python
+from selenium import webdriver
+
+browser = webdriver.Chrome()
+browser = webdriver.Firefox()
+```
+```python
+from selenium import webdriver
+
+browser = webdriver.Chrome()
+
+browser.get("http://www.baidu.com")
+print(browser.page_source)
+browser.close() 
+```
+```python
+from selenium import webdriver
+
+browser = webdriver.Chrome()
+
+browser.get("http://www.taobao.com")
+input_first = browser.find_element_by_id("q")
+input_second = browser.find_element_by_css_selector("#q")
+input_third = browser.find_element_by_xpath('//*[@id="q"]')
+print(input_first)
+print(input_second)
+print(input_third)
+browser.close()
+```
