@@ -8,7 +8,10 @@ excerpt_separator: '```'
 ---
 
 Today, we are going to know a method which are Exists(). Exists() is used to determine whether the element is in the list or not, then return bool type to you. For example, if i want to find whether 5 is in \[1,2,3,4,5\] or not, we can use Exists() method.
-```c-sharp
+
+There is the example to show how to use below:
+
+~~~csharp
 using System;
 using System.Collections.Generic;
 
@@ -24,9 +27,11 @@ namespace ConsoleApp123
         }
     }
 }
-```
+~~~
 
-```c-sharp
+Actually, the logic of Exists() is the same as the method IsExist below:&nbsp;
+
+~~~csharp
 using System;
 using System.Collections.Generic;
 
@@ -54,4 +59,4 @@ namespace ConsoleApp123
         }
     }
 }
-```
+~~~
