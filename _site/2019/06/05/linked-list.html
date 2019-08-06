@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Linked List</title>
+  <meta name="description" content="Today, i wanna talk about the one of most important algorithm ‘Linked List’. When we store a large amount of data, we often use arrays, but when we perform t...">
+
+  <link rel="canonical" href="http://localhost:4000/2019/06/05/linked-list.html">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/blog.css" >
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  <link rel="icon" type="image/png" href="/assets/img/oliver-github.png">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+    <body>
+        <header class="bloghead">
+    <dev class="authorheader">
+        <a href="/">
+            <img alt="My Avatar" src="/assets/img/oliver-github.png"/>
+        </a>
+        <dev class="blogtitle">
+            <h1><a href="/">Oliver</a></h1>
+            <h5> Computer science & mathematics student graduating from the University of Auckland. Currently, I am a graduate developer at Proprius Ltd. </h5>
+        </dev>
+    </dev>
+
+    <nav class="menu" role="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>|</li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="https://github.com/dsy401">Github</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="/about.html"> About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="blogmain">
+            <header>
+                <h1 class="article-title">Linked List</h1>
+                <p class="article-time">
+                    2019-06-05 11:56:00,  published in <span>Auckland</span>
+                </p>
+                <p class="article-hint">
+                    If you have any question, you can email me  <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>.
+                </p>
+            </header>
+            <p>Today, i wanna talk about the one of most important algorithm ‘Linked List’. When we store a large amount of data, we often use arrays, but when we perform the insert operation, it is very troublesome. See the example below, there is a bunch of data 1, 2, 3, 5, 6, 7 - we are going to Insert between 3 and 5 as shown in Figure 4. If we use arrays, what do we do? Of course, the data after 5 is backed up by one, and then inserted as shown in Figure 4. This is very troublesome, but if I use a linked list, I will insert 4 directly between 3 and 5, which is very convenient.</p>
+
+<p>So what is the structure of the linked list? As the name implies, the linked list is of course like a chain, connected by a node node to form a data link.</p>
+
+<p>The structure of the linked list is that the head saves the address of the first node:</p>
+
+<p><img src="/assets/img/linked_list_img.png" alt="" width="700" height="207" /></p>
+
+<p>Further more, let’s implement the linked list with Python.</p>
+
+<p>Firstly, we need to define the node class:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="s">'''
+    data: data in this node
+    _next: the next node connecting to this node
+    '''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">pnext</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_next</span> <span class="o">=</span> <span class="n">pnext</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">'''
+        define output: node data
+        '''</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Test the Linked list:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">print_list</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">node</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">_next</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">node1</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s">"car"</span><span class="p">)</span>
+    <span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s">"bus"</span><span class="p">)</span>
+    <span class="n">node3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s">"lorry"</span><span class="p">)</span>
+    <span class="n">node1</span><span class="o">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">node2</span>
+    <span class="n">node2</span><span class="o">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">node3</span>
+    <span class="n">print_list</span><span class="p">(</span><span class="n">node1</span><span class="p">)</span> <span class="c1">#output: car bus lorry
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>node1 -&gt; node2 -&gt; node3 === car -&gt; bus -&gt; lorry</p>
+
+<p>These nodes are connected together to form a linked list.</p>
+
+            <footer class="article-footer">
+    <div class="authorimage">
+        <img src="/assets/img/oliver-github.png" alt="My Avatar" class="img-circle">
+    </div>
+    <section class="author">
+        <h4><a href="/about.html">Oliver Deng</a></h4>
+        <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>
+    </section>
+</footer>
+
+        </main>
+
+        <div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2019 Oliver Deng - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74743250-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+
+</html>

@@ -6,13 +6,13 @@ baseurl:
 url: https://dsy401.github.io
 rss_url:
 
-# Build settings
-
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
 highlight: true
 #highlighter: rouge
 
 #timezone: Antarctica/McMurdo
-
 markdown: kramdown
 kramdown:
   auto_ids: true
