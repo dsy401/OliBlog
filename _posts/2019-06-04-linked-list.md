@@ -19,7 +19,7 @@ Further more, let's implement the linked list with Python.
 
 Firstly, we need to define the node class:
 
-```python
+~~~python
 class Node:
     '''
     data: data in this node
@@ -34,19 +34,25 @@ class Node:
         define output: node data
         '''
         return str(self.data)
-```
-```python
+~~~
+
+Test the Linked list:
+
+~~~python
 def print_list(node):
     while node:
         print(node.data)
         node = node._next
-        
+
 def main():
     node1 = Node("car")
     node2 = Node("bus")
     node3 = Node("lorry")
     node1.next = node2
     node2.next = node3
-    print_list(node1)
+    print_list(node1) #output: car bus lorry
+~~~
 
-```
+node1 -&gt; node2 -&gt; node3 === car -&gt; bus -&gt; lorry
+
+These nodes are connected together to form a linked list.
