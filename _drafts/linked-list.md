@@ -19,4 +19,19 @@ Further more, let's implement the linked list with Python.
 
 Firstly, we need to define the node class:
 
-&nbsp;
+```python
+class Node:
+    '''
+    data: data in this node
+    _next: the next node connecting to this node
+    '''
+    def __init__(self, data, pnext=None):
+        self.data = data
+        self._next = pnext
+
+    def __repr__(self):
+        '''
+        define output: node data
+        '''
+        return str(self.data)
+```
