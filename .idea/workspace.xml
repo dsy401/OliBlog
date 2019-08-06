@@ -14,20 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_drafts/c-list-exists.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="251">
-                <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -61,12 +48,13 @@
         <option value="$PROJECT_DIR$/_posts/2019-05-23-stack.md" />
         <option value="$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md" />
         <option value="$PROJECT_DIR$/_drafts/c-list-exists.md" />
+        <option value="$PROJECT_DIR$/_drafts/selenium.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1871" />
-    <option name="y" value="110" />
+    <option name="x" value="1936" />
+    <option name="y" value="66" />
     <option name="width" value="1472" />
     <option name="height" value="901" />
   </component>
@@ -75,6 +63,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,31 +71,10 @@
               <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="_includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,14 +121,17 @@
       <workItem from="1564880665881" duration="85000" />
       <workItem from="1564924612418" duration="523000" />
       <workItem from="1564993820666" duration="1288000" />
+      <workItem from="1564996764180" duration="806000" />
+      <workItem from="1565052873601" duration="7000" />
+      <workItem from="1565088438840" duration="508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10937000" />
+    <option name="totallyTimeSpent" value="12258000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="26" width="1472" height="901" extended-state="0" />
+    <frame x="1936" y="66" width="1472" height="901" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23986015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -316,13 +287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post_layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-05-23-stack.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -334,11 +298,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md" />
-    <entry file="file://$PROJECT_DIR$/_drafts/c-list-exists.md">
+    <entry file="file://$PROJECT_DIR$/_drafts/c-list-exists.md" />
+    <entry file="file://$PROJECT_DIR$/_layouts/post_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/selenium.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="251">
-            <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <first_editor relative-caret-position="101">
+            <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           </first_editor>
           <second_editor />
         </state>
