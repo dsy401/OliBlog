@@ -35,3 +35,18 @@ class Node:
         '''
         return str(self.data)
 ```
+```python
+def print_list(node):
+    while node:
+        print(node.data)
+        node = node._next
+        
+def main():
+    node1 = Node("car")
+    node2 = Node("bus")
+    node3 = Node("lorry")
+    node1.next = node2
+    node2.next = node3
+    print_list(node1)
+
+```
