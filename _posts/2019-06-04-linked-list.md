@@ -13,7 +13,7 @@ So what is the structure of the linked list? As the name implies, the linked lis
 
 The structure of the linked list is that the head saves the address of the first node:
 
-![](/assets/img/linked_list_img.png){: width="960" height="207"}
+![](/assets/img/linked_list_img.png){: width="700" height="207"}
 
 Further more, let's implement the linked list with Python.
 
