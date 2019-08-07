@@ -7,8 +7,6 @@ pulished: true
 excerpt_separator: '```'
 ---
 
-&nbsp;
-
 In this chapter we will discuss the life cycle of React components. The life cycle of a component can be divided into three states: Mounting (inserted real DOM), Updating (re-rendering) and Unmounting (removed real DOM).
 
 The life cycle methods are:
