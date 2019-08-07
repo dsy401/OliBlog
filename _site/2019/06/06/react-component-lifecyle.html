@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>React Component Lifecyle</title>
+  <meta name="description" content=" In this chapter we will discuss the life cycle of React components. The life cycle of a component can be divided into three states: Mounting (inserted real ...">
+
+  <link rel="canonical" href="http://localhost:4000/2019/06/06/react-component-lifecyle.html">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/blog.css" >
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  <link rel="icon" type="image/png" href="/assets/img/oliver-github.png">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+    <body>
+        <header class="bloghead">
+    <dev class="authorheader">
+        <a href="/">
+            <img alt="My Avatar" src="/assets/img/oliver-github.png"/>
+        </a>
+        <dev class="blogtitle">
+            <h1><a href="/">Oliver</a></h1>
+            <h5> Computer science & mathematics student graduating from the University of Auckland. Currently, I am a graduate developer at Proprius Ltd. </h5>
+        </dev>
+    </dev>
+
+    <nav class="menu" role="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>|</li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="https://github.com/dsy401">Github</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="/about.html"> About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="blogmain">
+            <header>
+                <h1 class="article-title">React Component Lifecyle</h1>
+                <p class="article-time">
+                    2019-06-06 18:24:00,  published in <span>Auckland</span>
+                </p>
+                <p class="article-hint">
+                    If you have any question, you can email me  <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>.
+                </p>
+            </header>
+            <p> </p>
+
+<p>In this chapter we will discuss the life cycle of React components. The life cycle of a component can be divided into three states: Mounting (inserted real DOM), Updating (re-rendering) and Unmounting (removed real DOM).</p>
+
+<p>The life cycle methods are:</p>
+
+<ul>
+  <li><strong><font size="4">componentWillMount</font></strong>: Called before rendering, on the client side also on the server side.</li>
+  <li><strong><font size="4">componentDidMount</font></strong> : Called after the first render, only on the client side. The component has then generated the corresponding DOM structure, which can be accessed via this.getDOMNode(). If you want to work with other JavaScript frameworks, you can call setTimeout, setInterval or send an AJAX request in this method (to prevent asynchronous operations from blocking the UI).</li>
+  <li><strong><font size="4">componentWillReceiveProps</font></strong>: Called when the component receives a new prop (updated). This method will not be called when the render is initialized.</li>
+  <li><strong><font size="4">shouldComponentUpdate</font></strong>: Returns a boolean value. Called when the component receives a new props or state. Not called at initialization or when using forceUpdate.</li>
+  <li><strong><font size="4">componentWillUpdate</font></strong>: Called when the component receives a new props or state but has not yet rendered. It will not be called during initialization.</li>
+  <li><strong><font size="4">componentDidUpdate</font></strong>: Called immediately after the component has completed the update. It will not be called during initialization.</li>
+  <li><strong><font size="4">componentWillUnmount</font></strong>: Called immediately before the component is removed from the DOM.</li>
+</ul>
+
+            <footer class="article-footer">
+    <div class="authorimage">
+        <img src="/assets/img/oliver-github.png" alt="My Avatar" class="img-circle">
+    </div>
+    <section class="author">
+        <h4><a href="/about.html">Oliver Deng</a></h4>
+        <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>
+    </section>
+</footer>
+
+        </main>
+
+        <div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2019 Oliver Deng - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74743250-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+
+</html>
