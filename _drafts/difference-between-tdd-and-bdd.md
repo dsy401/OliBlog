@@ -63,3 +63,61 @@ For example, If the developer writes a function to calculate the factorial, then
 
 &nbsp;
 {: .present-before-paste}
+```javascript
+var assert = require('assert'),
+    factorial = require('../index');
+suite('Test', function (){
+  setup(function (){
+    // Create any objects that we might need
+  });
+  suite('#factorial()', function (){
+    test('equals 1 for sets of zero length', function (){
+      assert.equal(1, factorial(0));
+    });
+    test('equals 1 for sets of length one', function (){
+      assert.equal(1, factorial(1));
+    });
+    test('equals 2 for sets of length two', function (){
+      assert.equal(2, factorial(2));
+    });
+    test('equals 6 for sets of length three', function (){
+      assert.equal(6, factorial(3));
+    });
+  });
+});
+```
+
+```javascript
+module.exports = function (n) {
+  if (n < 0) return NaN;
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+};
+```
+
+```javascript
+var assert = require('assert'),
+    factorial = require('../index');
+describe('Test', function (){
+  before(function(){
+    // Stuff to do before the tests, like imports, what not
+  });
+  describe('#factorial()', function (){
+    it('should return 1 when given 0', function (){
+      factorial(0).should.equal(1);
+    });
+    it('should return 1 when given 1', function (){
+      factorial(1).should.equal(1);
+    });
+    it('should return 2 when given 2', function (){
+      factorial(2).should.equal(2);
+    });
+    it('should return 6 when given 3', function (){
+      factorial(3).should.equal(6);
+    });
+  });
+  after(function () {
+    // Anything after the tests have finished
+  });
+});
+```
