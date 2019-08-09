@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: What is dynamic programming
-date: 2019-06-10 11:12:00
+date: 2019-06-12 06:12:00
 location: Auckland
 pulished: true
 excerpt_separator: '```'
