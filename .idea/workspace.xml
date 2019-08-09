@@ -63,12 +63,13 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_posts/2019-06-06-react-component-lifecyle.md" />
+        <option value="$PROJECT_DIR$/_drafts/difference-between-tdd-and-bdd.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="187" />
-    <option name="y" value="70" />
+    <option name="x" value="2121" />
+    <option name="y" value="71" />
     <option name="width" value="1472" />
     <option name="height" value="901" />
   </component>
@@ -77,12 +78,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -98,7 +105,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,15 +157,16 @@
       <workItem from="1565088438840" duration="3925000" />
       <workItem from="1565173896669" duration="1555000" />
       <workItem from="1565216820251" duration="3000" />
-      <workItem from="1565263309205" duration="372000" />
+      <workItem from="1565263309205" duration="622000" />
+      <workItem from="1565356027637" duration="545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17605000" />
+    <option name="totallyTimeSpent" value="18400000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="187" y="70" width="1472" height="901" extended-state="0" />
+    <frame x="1914" y="147" width="1472" height="901" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49539596" visible="true" weight="0.23986015" />
       <window_info id="Structure" order="1" sideWeight="0.50460404" side_tool="true" weight="0.23986015" />
@@ -403,5 +410,6 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/difference-between-tdd-and-bdd.md" />
   </component>
 </project>
