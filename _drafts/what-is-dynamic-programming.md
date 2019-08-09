@@ -35,4 +35,25 @@ There are ten steps, going from top to bottom, only one or two steps at a time. 
 
 Solution 1:
 
-&nbsp;
+```python
+def get_count(n):
+    if n == 1:return 1
+    if n == 2:return 2
+    else:
+        return get_count(n-1)+get_count(n-2)
+print(get_count(10))
+```
+the code is easy and useful
+
+Obviously this is a full binary tree with a height of N-1. Therefore, the total number of nodes is 2^N-1, and the time complexity is O(2^N). It’s horrible to watch.
+
+```python
+def get_count(n):
+    if n == 1:return 1
+    elif n == 2 :return 2
+    else:
+        l = [1,2]
+        for i in range(3,n):
+            l[0],l[1] = l[1],l[0]+l[1]
+        return l[0]+l[1]
+```
