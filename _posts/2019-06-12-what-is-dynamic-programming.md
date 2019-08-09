@@ -48,8 +48,6 @@ the code is easy and useful. Obviously this is a full binary tree with a height 
 
 #### Solution 2:
 
-&nbsp;
-
 Looking back at the recursive calculation method above, it is not difficult to see that there are only f(1)-f(N) nodes in total, and the number of nodes is increased to 2^N-1, which is a large number of repeated operations. Find the root of the problem, the corresponding solution came into being, that is, from the bottom up, save the previously calculated value in a hash table, and then query it later, there is no need to calculate. The time complexity is O(n) and the space complexity is O(n). But when you think about it, you don't need to save all the fs. Each f is only related to the first two values, so the space complexity can be reduced to O(1). Let's take a look at the relevant code.
 
 ~~~python
