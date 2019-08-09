@@ -32,3 +32,7 @@ There are ten steps, going from top to bottom, only one or two steps at a time. 
 1. Optimal Substructure: Let's consider the final step to the tenth step. The final step must go to the eighth or ninth. It is not difficult to get f(10) = f(9)+f(8). f(9) = f(8)+f(7)
 2. Boundary: f(1) = 1, f(2) = 2
 3. State transition: f(n) = f(n-1) + f(n-2)
+
+Solution 1:
+
+&nbsp;
