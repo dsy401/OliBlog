@@ -33,5 +33,24 @@ In this article, we'll take a closer look at BigInt and see how it solves the li
 &nbsp;
 
 Under this standard, very large integers that cannot be accurately represented are automatically rounded off. Specifically, the Number type in JS can only safely represent an integer between -9007199254740991 (-(2^53-1)) and 9007199254740991 (2^53-1), and any integer value outside this range may be lost. Precision.
-
-&nbsp;
+```javascript
+console.log(9999999999999999);    //  10000000000000000
+```
+```javascript
+//Look the last digit
+9007199254740992 === 9007199254740993;    // true
+```
+```javascript
+const minInt = Number.MIN_SAFE_INTEGER;	
+console.log(minInt);         // → -9007199254740991	
+console.log(minInt - 5);     // → -9007199254740996	
+// notice how this outputs the same value as above	
+console.log(minInt - 4);     // → -9007199254740996
+```
+```javascript
+console.log(9007199254740995n);    // → 9007199254740995n	
+console.log(9007199254740995);     // → 9007199254740996
+```
+```javascript
+BigInt("9007199254740995");    // → 9007199254740995n
+```

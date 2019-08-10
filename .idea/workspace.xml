@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a1ba280-6a7b-4bdb-a5b9-24b4a207964e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md">
+        <entry file="file://$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="448">
-                <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <first_editor relative-caret-position="415">
+                <caret line="36" selection-start-line="36" selection-end-line="36" />
               </first_editor>
               <second_editor />
             </state>
@@ -78,6 +79,7 @@
         <option value="$PROJECT_DIR$/_posts/2019-06-06-react-component-lifecyle.md" />
         <option value="$PROJECT_DIR$/_drafts/difference-between-tdd-and-bdd.md" />
         <option value="$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md" />
+        <option value="$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md" />
       </list>
     </option>
   </component>
@@ -92,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,15 +111,11 @@
               <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
               <item name="_includes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,18 +169,19 @@
       <workItem from="1565173896669" duration="1555000" />
       <workItem from="1565216820251" duration="3000" />
       <workItem from="1565263309205" duration="622000" />
-      <workItem from="1565356027637" duration="866000" />
+      <workItem from="1565356027637" duration="1043000" />
+      <workItem from="1565439148160" duration="276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18721000" />
+    <option name="totallyTimeSpent" value="19174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2121" y="71" width="1472" height="901" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49539596" visible="true" weight="0.23986015" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49539596" visible="true" weight="0.23986015" />
       <window_info id="Structure" order="1" sideWeight="0.50460404" side_tool="true" weight="0.23986015" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -195,7 +193,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32880098" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32880098" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -426,11 +424,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/difference-between-tdd-and-bdd.md" />
-    <entry file="file://$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md">
+    <entry file="file://$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md" />
+    <entry file="file://$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="448">
-            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <first_editor relative-caret-position="415">
+            <caret line="36" selection-start-line="36" selection-end-line="36" />
           </first_editor>
           <second_editor />
         </state>
