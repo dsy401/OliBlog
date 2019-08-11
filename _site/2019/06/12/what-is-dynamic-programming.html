@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What is dynamic programming</title>
+  <meta name="description" content="What is dynamic programming?Dynamic programming is a branch of operations research and a mathematical method to optimize the decision process. Transforming t...">
+
+  <link rel="canonical" href="http://localhost:4000/2019/06/12/what-is-dynamic-programming.html">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/blog.css" >
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  <link rel="icon" type="image/png" href="/assets/img/oliver-github.png">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+    <body>
+        <header class="bloghead">
+    <dev class="authorheader">
+        <a href="/">
+            <img alt="My Avatar" src="/assets/img/oliver-github.png"/>
+        </a>
+        <dev class="blogtitle">
+            <h1><a href="/">Oliver</a></h1>
+            <h5> Computer science & mathematics student graduating from the University of Auckland. Currently, I am a graduate developer at Proprius Ltd. </h5>
+        </dev>
+    </dev>
+
+    <nav class="menu" role="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>|</li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="https://github.com/dsy401">Github</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="/about.html"> About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="blogmain">
+            <header>
+                <h1 class="article-title">What is dynamic programming</h1>
+                <p class="article-time">
+                    2019-06-12 18:12:00,  published in <span>Auckland</span>
+                </p>
+                <p class="article-hint">
+                    If you have any question, you can email me  <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>.
+                </p>
+            </header>
+            <h3 id="what-is-dynamic-programming">What is dynamic programming?</h3>
+
+<p>Dynamic programming is a branch of operations research and a mathematical method to optimize the decision process. Transforming the multi-stage process into a series of single-stage problems, using the relationship between the stages, solving one by one, created a new method to solve such process optimization problems - dynamic programming.</p>
+
+<p>Using dynamic planning features:</p>
+
+<ol>
+  <li>
+    <p>Find the optimal solution to a problem.</p>
+  </li>
+  <li>
+    <p>Big problems can be broken down into sub-problems, sub-questions and overlapping sub-problems.</p>
+  </li>
+  <li>
+    <p>The optimal solution of the overall problem depends on the optimal solution of the subproblem (state transition equation).</p>
+  </li>
+  <li>
+    <p>Analyze the problem from top to bottom and solve the problem from the bottom up.</p>
+  </li>
+  <li>
+    <p>Discuss the underlying boundary problem.</p>
+  </li>
+</ol>
+
+<p>The most important three concepts of dynamic programming are: 1. Optimal substructure 2. Boundary 3. State transition equation.</p>
+
+<h3 id="walking-the-stairs-problem"><br />Walking the stairs Problem</h3>
+
+<p>There are ten steps, going from top to bottom, only one or two steps at a time. How many ways to go?</p>
+
+<ol>
+  <li>Optimal Substructure: Let’s consider the final step to the tenth step. The final step must go to the eighth or ninth. It is not difficult to get f(10) = f(9)+f(8). f(9) = f(8)+f(7)</li>
+  <li>Boundary: f(1) = 1, f(2) = 2</li>
+  <li>State transition: f(n) = f(n-1) + f(n-2)</li>
+</ol>
+
+<h4 id="solution-1">Solution 1:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span><span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span><span class="k">return</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">get_count</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">get_count</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">get_count</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>the code is easy and useful. Obviously this is a full binary tree with a height of N-1. Therefore, the total number of nodes is 2^N-1, and the time complexity is O(2^N). It’s too horrible.</p>
+
+<h4 id="solution-2">Solution 2:</h4>
+
+<p>Looking back at the recursive calculation method above, it is not difficult to see that there are only f(1)-f(N) nodes in total, and the number of nodes is increased to 2^N-1, which is a large number of repeated operations. Find the root of the problem, the corresponding solution came into being, that is, from the bottom up, save the previously calculated value in a hash table, and then query it later, there is no need to calculate. The time complexity is O(n) and the space complexity is O(n). But when you think about it, you don’t need to save all the fs. Each f is only related to the first two values, so the space complexity can be reduced to O(1). Let’s take a look at the relevant code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span><span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">:</span><span class="k">return</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+            <footer class="article-footer">
+    <div class="authorimage">
+        <img src="/assets/img/oliver-github.png" alt="My Avatar" class="img-circle">
+    </div>
+    <section class="author">
+        <h4><a href="/about.html">Oliver Deng</a></h4>
+        <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>
+    </section>
+</footer>
+
+        </main>
+
+        <div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2019 Oliver Deng - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74743250-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+
+</html>
