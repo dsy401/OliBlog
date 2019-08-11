@@ -17,4 +17,22 @@ MySQL can support large data volumes very well, but in general, the smaller the 
 
 MySQL supports SQL subqueries starting with 4.1. This technique can use a SELECT statement to create a single-column query result and then use that result as a filter in another query. For example, if we want to delete a customer who does not have any orders in the customer basic information table, we can use the sub-query to first take out all the customer IDs that have placed the order from the sales information table, and then pass the results to the main query, as shown below. :
 
-&nbsp;
+```sql
+SELECT  *  FROM  customerinfo
+ 
+WHERE  customerid  NOT IN (SELECT customerid FROM salesinfo)
+```
+```sql
+SELECT  *  FROM  customerinfo
+ 
+LEFT  JOIN  salesinfo ON customerinfo.customerid = salesinfo.customerid
+ 
+WHERE salesinfo.customerid IS NULL
+```
+```sql
+SELECT  name,phone FROM client UNION
+ 
+SELECT name,birthdate FROM  author  UNION
+ 
+SELECT name,supplier FROM product
+```
