@@ -31,15 +31,9 @@ LEFT  JOIN  salesinfo ON customerinfo.customerid = salesinfo.customerid
 WHERE salesinfo.customerid IS NULL
 ~~~
 
-&nbsp;
-
 JOIN: The reason why it is more efficient is that MySQL does not need to create temporary tables in memory to complete this logical two-step query.
 
-&nbsp;
-
 ### 3\. Use union (UNION) instead of manually created temporary table
-
-&nbsp;
 
 MySQL supports union queries starting with version 4.0, which can be used to merge two or more select queries that need to use temporary tables. At the end of the client's query session, the temporary table will be automatically deleted, thus ensuring that the database is neat and efficient. When using union to create a query, we only need to use UNION as a keyword to connect multiple select statements. It should be noted that the number of fields in all select statements should be the same. The following example demonstrates a query using UNION.
 
@@ -54,15 +48,28 @@ SELECT name,supplier FROM product
 ### 4\. Transaction
 
 Although we can use Sub-Queries, JOIN, and UNION to create a variety of queries, not all database operations can be completed with just one or a few SQL statements. of. More often than not, a series of statements are needed to do something. But in this case, when a statement in this statement block runs incorrectly, the operation of the entire statement block becomes undefined. Imagine that you want to insert a piece of data into two associated tables at the same time. It may happen that after a successful update in the first table, the database suddenly has an unexpected condition, causing the operation in the second table to be incomplete. In this way, the data will be incomplete and even destroy the data in the database. To avoid this, you should use a transaction. Its purpose is: either each statement in the statement block succeeds or fails. In other words, it is possible to maintain the consistency and integrity of the data in the database. Things start with the BEGIN keyword and the COMMIT keyword ends. If a SQL operation fails between the two, then the ROLLBACK command will restore the database to the state it was in before BEGIN started.
-```sql
+
+~~~sql
 BEGIN;
   INSERT   INTO   salesinfo   SET   customerid=14;
   UPDATE   inventory   SET   quantity =11   WHERE   item='book';
 COMMIT;
-```
-```sql
+~~~
 
+Another important role of a transaction is that when multiple users use the same data source at the same time, it can use the method of locking the database to provide a secure access mode for the user, so as to ensure that the user's operation is not interfered by other users.
+
+### 5\. Lock
+
+&nbsp;
+
+Although transactions are a very good way to maintain database integrity, but because of its exclusivity, sometimes affect the performance of the database, especially in large applications. Since the database will be locked during the execution of the transaction, other user requests can only wait temporarily until the end of the transaction. If a database system has only a few users to use, the impact of the transaction will not become a big problem; but if there are thousands of users accessing a database system at the same time, such as accessing an e-commerce website, it will be generated. More serious response delays. In fact, in some cases we can get better performance by locking the table. The following example uses the method of locking the table to complete the function of the transaction in the previous example.
+
+~~~sql
 LOCK TABLE inventory WRITE SELECT quantity  FROM   inventory   WHERE Item='book';
 ...
 UPDATE   inventory   SET   Quantity=11   WHERE  Item='book';UNLOCKTABLES
-```
+~~~
+
+&nbsp;
+
+Here, we use a select statement to take the initial data, through some calculations, update the new value to the table with the update statement. The LOCKTABLE statement containing the WRITE keyword ensures that there will be no other accesses to insert, update, or delete the inventory until the UNLOCKTABLES command is executed.
