@@ -54,5 +54,15 @@ SELECT name,supplier FROM product
 ### 4\. Transaction
 
 Although we can use Sub-Queries, JOIN, and UNION to create a variety of queries, not all database operations can be completed with just one or a few SQL statements. of. More often than not, a series of statements are needed to do something. But in this case, when a statement in this statement block runs incorrectly, the operation of the entire statement block becomes undefined. Imagine that you want to insert a piece of data into two associated tables at the same time. It may happen that after a successful update in the first table, the database suddenly has an unexpected condition, causing the operation in the second table to be incomplete. In this way, the data will be incomplete and even destroy the data in the database. To avoid this, you should use a transaction. Its purpose is: either each statement in the statement block succeeds or fails. In other words, it is possible to maintain the consistency and integrity of the data in the database. Things start with the BEGIN keyword and the COMMIT keyword ends. If a SQL operation fails between the two, then the ROLLBACK command will restore the database to the state it was in before BEGIN started.
+```sql
+BEGIN;
+  INSERT   INTO   salesinfo   SET   customerid=14;
+  UPDATE   inventory   SET   quantity =11   WHERE   item='book';
+COMMIT;
+```
+```sql
 
-&nbsp;
+LOCK TABLE inventory WRITE SELECT quantity  FROM   inventory   WHERE Item='book';
+...
+UPDATE   inventory   SET   Quantity=11   WHERE  Item='book';UNLOCKTABLES
+```
