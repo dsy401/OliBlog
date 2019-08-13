@@ -13,7 +13,6 @@ The VM is responsible for synchronizing the Model data to the View display, and 
 
 ### **Redux**
 
-&nbsp;
 
 #### Design thinking
 
@@ -22,12 +21,25 @@ The VM is responsible for synchronizing the Model data to the View display, and 
 
 #### Store
 
-&nbsp;
 
 Store is the place to save data, you can think of it as a container, an application can only have one redux.
 
-&nbsp;
-
 Redux provides the createStore function to generate the Store:
-
-&nbsp;
+```javascript
+import { createStore } from 'redux';
+const store=createStore(fn);
+```
+```javascript
+store.dispatch(action);
+```
+```javascript
+const defaultState = 0;
+const reducer=(state=defaultState,action)=>{
+    switch(action.type){
+        case 'ADD_TO':
+        return state+action.payload;
+        default:state;
+    }
+}
+const store=createStore(reducer);
+```
