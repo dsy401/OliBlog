@@ -13,7 +13,6 @@ The VM is responsible for synchronizing the Model data to the View display, and 
 
 ### **Redux**
 
-
 #### Design thinking
 
 1. A web application is a state machine, and the view and state are one-to-one.
@@ -21,18 +20,26 @@ The VM is responsible for synchronizing the Model data to the View display, and 
 
 #### Store
 
-
 Store is the place to save data, you can think of it as a container, an application can only have one redux.
 
 Redux provides the createStore function to generate the Store:
-```javascript
+
+~~~javascript
 import { createStore } from 'redux';
 const store=createStore(fn);
-```
-```javascript
+~~~
+
+&nbsp;
+
+1\. When we need to modify the state, we need to dispatch an action
+
+~~~javascript
 store.dispatch(action);
-```
-```javascript
+~~~
+
+2\.store needs to make the corresponding changes to receive the action. Called reducer, the reducer is passed in as a parameter in createStore
+
+~~~javascript
 const defaultState = 0;
 const reducer=(state=defaultState,action)=>{
     switch(action.type){
@@ -42,4 +49,6 @@ const reducer=(state=defaultState,action)=>{
     }
 }
 const store=createStore(reducer);
-```
+~~~
+
+3\. After the state is changed, the view needs to be updated automatically. Use store.suscribe(listener) to listen. Automatic update if you write render or getState to listener
