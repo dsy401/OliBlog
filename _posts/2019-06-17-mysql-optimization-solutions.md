@@ -60,8 +60,6 @@ Another important role of a transaction is that when multiple users use the same
 
 ### 5\. Lock
 
-&nbsp;
-
 Although transactions are a very good way to maintain database integrity, but because of its exclusivity, sometimes affect the performance of the database, especially in large applications. Since the database will be locked during the execution of the transaction, other user requests can only wait temporarily until the end of the transaction. If a database system has only a few users to use, the impact of the transaction will not become a big problem; but if there are thousands of users accessing a database system at the same time, such as accessing an e-commerce website, it will be generated. More serious response delays. In fact, in some cases we can get better performance by locking the table. The following example uses the method of locking the table to complete the function of the transaction in the previous example.
 
 ~~~sql

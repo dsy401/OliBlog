@@ -9,7 +9,10 @@ rss_url:
 gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "page/:num"
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1195dcc63ccb60ac9efd7a3c1d1777e1c924014
 highlight: true
 #highlighter: rouge
 
