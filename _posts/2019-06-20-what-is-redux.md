@@ -29,8 +29,6 @@ import { createStore } from 'redux';
 const store=createStore(fn);
 ~~~
 
-&nbsp;
-
 1\. When we need to modify the state, we need to dispatch an action
 
 ~~~javascript
