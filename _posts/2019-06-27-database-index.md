@@ -7,8 +7,6 @@ pulished: true
 excerpt_separator: '```'
 ---
 
-&nbsp;
-
 ### Index concept
 
 An index is a data structure that sorts the values ​​of one or more columns in a database table. Indexes provide quick access to specific information in database tables. One of the main purposes of the index is to speed up the retrieval of data in the table, which is to assist the information searcher to find the auxiliary data structure of the record ID that meets the constraint as soon as possible.
@@ -23,11 +21,7 @@ Speed ​​up the retrieval of data. &nbsp; &nbsp; &nbsp; In the information re
 
 ### The disadvantage of index
 
-&nbsp;
-
 Creating an index and maintaining an index takes time, and this time increases as the amount of data increases, such as INSERT, UPDATE, and DELETE on the table. In fact, the index is also a table, which holds the primary key and the index field. The index needs to occupy the physical space.
-
-&nbsp;
 
 ### Create an index
 
