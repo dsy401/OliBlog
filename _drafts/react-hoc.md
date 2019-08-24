@@ -11,4 +11,75 @@ High-level components (HOC) are an advanced technique used in React to reuse com
 
 For example:
 
-&nbsp;
+```javascript
+import React, {Component} from 'react';
+
+const SchoolHoc = (fileds) => {
+    return WrappedComponent => {
+        return class extends Component{
+            render(){
+                return (
+                    <WrappedComponent
+                        {...this.props}
+                        school={{...fileds}}
+                    />
+                )
+            }
+        }
+    }
+}
+
+export default SchoolHoc
+```
+
+```javascript
+import React from "react";
+import DashboardLayout from "../../components/layout/dashboard_layout/dashboard_layout";
+import { Switch, Route } from "react-router-dom";
+import Content from './content/content'
+import SchoolHoc from '../../hoc/SchoolHoc'
+
+const Dashboard = props => {
+  const schools = [
+    {
+      name: 'uoa',
+    },
+    {
+      name: 'aut',
+    },
+    {
+      name: 'massey',
+    },
+    {
+      name: 'lincoln',
+    },
+    {
+      name: 'otago',
+    },
+    {
+      name: 'uc',
+    },
+    {
+      name: 'victoria',
+    },
+    {
+      name: 'waikato',
+    }
+  ]
+  return (
+    <DashboardLayout>
+      <Switch>
+        {schools.map((school,index)=>(
+            <Route
+                key={index}
+                path={`${props.match.path}/${school.name}`}
+                component={SchoolHoc({name: school.name})(Content)}
+            />
+        ))}
+      </Switch>
+    </DashboardLayout>
+  );
+};
+
+export default Dashboard;
+```

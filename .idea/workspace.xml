@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a1ba280-6a7b-4bdb-a5b9-24b4a207964e" name="Default Changelist" comment="" />
+    <list default="true" id="5a1ba280-6a7b-4bdb-a5b9-24b4a207964e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,17 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,12 +67,13 @@
         <option value="$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md" />
         <option value="$PROJECT_DIR$/_drafts/mysql-optimization-solutions.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_drafts/what-is-redux.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1932" />
-    <option name="y" value="119" />
+    <option name="x" value="185" />
+    <option name="y" value="46" />
     <option name="width" value="1472" />
     <option name="height" value="901" />
   </component>
@@ -100,7 +93,7 @@
             <path>
               <item name="OliBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="OliBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -163,15 +156,16 @@
       <workItem from="1565439148160" duration="526000" />
       <workItem from="1565529757379" duration="1164000" />
       <workItem from="1565531563090" duration="722000" />
+      <workItem from="1565702456593" duration="294000" />
+      <workItem from="1565855868833" duration="158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21310000" />
+    <option name="totallyTimeSpent" value="21762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1932" y="119" width="1472" height="901" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49539596" visible="true" weight="0.23986015" />
       <window_info id="Structure" order="1" sideWeight="0.50460404" side_tool="true" weight="0.23986015" />
@@ -291,13 +285,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/c-upload-filedelete-file.md" />
     <entry file="file://$PROJECT_DIR$/_drafts/c-list-exists.md" />
-    <entry file="file://$PROJECT_DIR$/_layouts/post_layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/selenium.md" />
     <entry file="file://$PROJECT_DIR$/_drafts/linked-list.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2019-05-23-stack.md">
@@ -358,14 +345,6 @@
     <entry file="file://$PROJECT_DIR$/_drafts/difference-between-tdd-and-bdd.md" />
     <entry file="file://$PROJECT_DIR$/_drafts/what-is-dynamic-programming.md" />
     <entry file="file://$PROJECT_DIR$/_drafts/js-latest-data-basic-type-bigint.md" />
-    <entry file="file://$PROJECT_DIR$/_drafts/PageController.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-257" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/mysql-optimization-solutions.md" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -415,9 +394,25 @@
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/PageController.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/what-is-redux.md" />
   </component>
 </project>
