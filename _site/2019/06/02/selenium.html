@@ -8,7 +8,7 @@
   <title>Selenium</title>
   <meta name="description" content="It is a big data era today. We use big data to handle anything like AI, Image Identification and machine learning. But, have you guys known where the data co...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/06/02/selenium.html">
+  <link rel="canonical" href="https://dsy401.github.io/2019/06/02/selenium.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -77,53 +77,30 @@
 
 <p>Above we know that selenium supports a lot of browsers, but if you want to declare and call the browser you need to:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 
 <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
 <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Here are just two examples, of course, other supported browsers can be called this way.</p>
 
 <h4 id="access-page"><strong><em>Access page</em></strong></h4>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 
 <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
 
 <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://www.tradme.co.nz"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
 <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>After the above code runs, it will automatically open the Chrome browser, and log in Trademe to print the source code of Trademe homepage, then close the browser.</p>
 
 <h4 id="find-element-single-element-lookup"><strong><em>Find element: Single element lookup</em></strong></h4>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 
 <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
 
@@ -135,7 +112,7 @@
 <span class="k">print</span><span class="p">(</span><span class="n">input_second</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">input_third</span><span class="p">)</span>
 <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Here is a list of commonly used methods for finding elements:</p>
 

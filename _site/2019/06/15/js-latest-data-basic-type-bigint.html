@@ -8,7 +8,7 @@
   <title>JS latest data basic type: BigInt</title>
   <meta name="description" content="The purpose of the BigInt data type is to have a larger integer value than the range supported by the Number data type. The ability to represent integers wit...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/06/15/js-latest-data-basic-type-bigint.html">
+  <link rel="canonical" href="https://dsy401.github.io/2019/06/15/js-latest-data-basic-type-bigint.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -88,33 +88,25 @@
 
 <p>Under this standard, very large integers that cannot be accurately represented are automatically rounded off. Specifically, the Number type in JS can only safely represent an integer between -9007199254740991 (-(2^53-1)) and 9007199254740991 (2^53-1), and any integer value outside this range may be lost. Precision.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9999999999999999</span><span class="p">);</span>    <span class="c1">//  10000000000000000</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9999999999999999</span><span class="p">);</span>    <span class="c1">//  10000000000000000</span>
+</code></pre></div></div>
 
 <p>This integer is greater than the largest integer that the JS Number type can represent, so it is rounded off. Accidental rounding can compromise the reliability and security of the program. This is another example:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="c1">//Look the last digit</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Look the last digit</span>
 <span class="mi">9007199254740992</span> <span class="o">===</span> <span class="mi">9007199254740993</span><span class="p">;</span>    <span class="c1">// true</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p> </p>
 
 <p>JS provides the Number.MAX_SAFE_INTEGER constant to represent the largest safe integer, and the Number.MIN_SAFE_INTEGER constant represents the smallest safe integer:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">minInt</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">.</span><span class="nx">MIN_SAFE_INTEGER</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">minInt</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">.</span><span class="nx">MIN_SAFE_INTEGER</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">minInt</span><span class="p">);</span>         <span class="c1">// → -9007199254740991</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">minInt</span> <span class="o">-</span> <span class="mi">5</span><span class="p">);</span>     <span class="c1">// → -9007199254740996</span>
 <span class="c1">// notice how this outputs the same value as above</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">minInt</span> <span class="o">-</span> <span class="mi">4</span><span class="p">);</span>     <span class="c1">// → -9007199254740996</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <h3 id="solution">Solution:</h3>
 
@@ -122,19 +114,16 @@
 
 <p>To address these limitations, some JS developers use string types to represent large integers. For example, the Twitter API adds a string version of the ID to an object when it responds with JSON. In addition, a number of libraries have been developed, such as bignumber.js, to make it easier to work with large integers. With BigInt, applications no longer need workarounds or libraries to safely represent integers other than Number.MAX_SAFE_INTEGER and Number.Min_SAFE_INTEGER. Arithmetic operations on large integers can now be performed in standard JS without the risk of loss of precision. To create a BigInt, simply append n to the end of the integer. Comparison:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9007199254740995</span><span class="nx">n</span><span class="p">);</span>    <span class="c1">// → 9007199254740995n</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9007199254740995</span><span class="nx">n</span><span class="p">);</span>    <span class="c1">// → 9007199254740995n</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9007199254740995</span><span class="p">);</span>     <span class="c1">// → 9007199254740996</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p> </p>
 
 <p>Alternatively, you can call the BigInt() constructor:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nx">BigInt</span><span class="p">(</span><span class="dl">"</span><span class="s2">9007199254740995</span><span class="dl">"</span><span class="p">);</span>    <span class="c1">// → 9007199254740995n</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">BigInt</span><span class="p">(</span><span class="dl">"</span><span class="s2">9007199254740995</span><span class="dl">"</span><span class="p">);</span>    <span class="c1">// → 9007199254740995n</span>
+</code></pre></div></div>
 
             <footer class="article-footer">
     <div class="authorimage">

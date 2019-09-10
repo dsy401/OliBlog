@@ -8,7 +8,7 @@
   <title>What is dynamic programming</title>
   <meta name="description" content="What is dynamic programming?Dynamic programming is a branch of operations research and a mathematical method to optimize the decision process. Transforming t...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/06/12/what-is-dynamic-programming.html">
+  <link rel="canonical" href="https://dsy401.github.io/2019/06/12/what-is-dynamic-programming.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -105,19 +105,13 @@
 
 <h4 id="solution-1">Solution 1:</h4>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span><span class="k">return</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span><span class="k">return</span> <span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">get_count</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">get_count</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">get_count</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>the code is easy and useful. Obviously this is a full binary tree with a height of N-1. Therefore, the total number of nodes is 2^N-1, and the time complexity is O(2^N). It’s too horrible.</p>
 
@@ -125,15 +119,7 @@
 
 <p>Looking back at the recursive calculation method above, it is not difficult to see that there are only f(1)-f(N) nodes in total, and the number of nodes is increased to 2^N-1, which is a large number of repeated operations. Find the root of the problem, the corresponding solution came into being, that is, from the bottom up, save the previously calculated value in a hash table, and then query it later, there is no need to calculate. The time complexity is O(n) and the space complexity is O(n). But when you think about it, you don’t need to save all the fs. Each f is only related to the first two values, so the space complexity can be reduced to O(1). Let’s take a look at the relevant code.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span><span class="k">return</span> <span class="mi">1</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">:</span><span class="k">return</span> <span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
@@ -141,7 +127,7 @@
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
             <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
             <footer class="article-footer">
     <div class="authorimage">

@@ -5,8 +5,8 @@ favicon: /assets/img/oliver-github.png
 baseurl:
 url: https://dsy401.github.io
 rss_url:
-
-gems: [jekyll-paginate]
+future: true
+plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "page/:num"
 highlight: true
@@ -14,7 +14,7 @@ highlight: true
 
 #timezone: Antarctica/McMurdo
 markdown: kramdown
-kramdown:
+syntax_highligter_opts:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char

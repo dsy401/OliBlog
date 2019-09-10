@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What is JAMstack</title>
+  <meta name="description" content="JAMstack refers to the technology stack built using JavaScript, API and Markup. JAM is short for JavaScript, API and Markup. The first letter is abbreviated....">
+
+  <link rel="canonical" href="https://dsy401.github.io/2019/06/23/what-is-jamstack.html">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/blog.css" >
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  <link rel="icon" type="image/png" href="/assets/img/oliver-github.png">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+    <body>
+        <header class="bloghead">
+    <dev class="authorheader">
+        <a href="/">
+            <img alt="My Avatar" src="/assets/img/oliver-github.png"/>
+        </a>
+        <dev class="blogtitle">
+            <h1><a href="/">Oliver</a></h1>
+            <h5> Computer science & mathematics student graduating from the University of Auckland. Currently, I am a graduate developer at Proprius Ltd. </h5>
+        </dev>
+    </dev>
+
+    <nav class="menu" role="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>|</li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="https://github.com/dsy401">Github</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="/about.html"> About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="blogmain">
+            <header>
+                <h1 class="article-title">What is JAMstack</h1>
+                <p class="article-time">
+                    2019-06-23 12:00:00,  published in <span>Auckland</span>
+                </p>
+                <p class="article-hint">
+                    If you have any question, you can email me  <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>.
+                </p>
+            </header>
+            <p>JAMstack refers to the technology stack built using JavaScript, API and Markup. JAM is short for JavaScript, API and Markup. The first letter is abbreviated. JAMstack is a modern web development based on client-side JavaScript, reusable API and pre-built Markup. The architecture needs to meet the following three criteria:</p>
+
+<ol>
+  <li>
+    <p>JavaScript: Any dynamic programming in the request/response cycle is handled by JavaScript and runs entirely on the client. This can be any front-end framework, library, or even lightweight JavaScript.</p>
+  </li>
+  <li>
+    <p>API: All server-side processes or database operations are abstracted into reusable APIs that are accessed via HTTPS using JavaScript. These can be customized or utilize third party services.</p>
+  </li>
+  <li>
+    <p>Markup: Templated tags should be pre-built at deployment time, usually using the site builder of the content site or the build tool for the web application.</p>
+  </li>
+</ol>
+
+<p>When we talk about “stacks,” we don’t talk about operating systems, specific web servers, backend programming languages, or databases. JAMstack has nothing to do with specific technologies. This is a new way to build websites and applications that deliver better performance, greater security, lower expansion costs, and a better developer experience.</p>
+
+<h3 id="what-is-not-jamstack">What is not JAMstack?</h3>
+
+<p>Any project that relies on tight coupling between the client and the server is not built using JAMstack. include:</p>
+
+<ul>
+  <li>
+    <p>Sites built using server-side CMS, such as WordPress, Drupal, Joomla, or Squarespace.</p>
+  </li>
+  <li>
+    <p>A web application running on a single server, it relies on Ruby, Node or other backend languages.</p>
+  </li>
+  <li>
+    <p>A one-page application that uses isomorphic rendering to build views on the server at runtime.</p>
+  </li>
+</ul>
+
+<h3 id="why-do-we-choose-jamstack"><strong>Why do we choose JAMstack?</strong></h3>
+
+<ol>
+  <li>
+    <p>Better performance: Why wait for the page to be dynamically built when the page is generated at deployment time? When it comes to minimizing the time of the first byte, nothing is better than the pre-built files provided by the CDN.</p>
+  </li>
+  <li>
+    <p>More security: abstracting server-side processes into microservice APIs can reduce the surface area of ​​the attack. You can also take advantage of the expertise of professional third-party services.</p>
+  </li>
+  <li>
+    <p>Cheaper, easier to extend: When your deployment is equivalent to a bunch of files that can be served anywhere, the extension is the problem of providing these files in more places. CDNs are perfect and usually include all the plans to expand them.</p>
+  </li>
+  <li>
+    <p>A better developer experience: loose coupling and control separation allow for more targeted development and debugging, and the choice of CMS options for site builder extensions eliminates the need to maintain separate stacks for content and marketing.</p>
+  </li>
+</ol>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<ol>
+  <li>
+    <p>The entire project is placed on the CDN.</p>
+  </li>
+  <li>
+    <p>Everything is in Git</p>
+  </li>
+  <li>
+    <p>Modern build tool</p>
+  </li>
+  <li>
+    <p>Automatic build</p>
+  </li>
+  <li>
+    <p>Atomic deployment</p>
+  </li>
+  <li>
+    <p>Instant cache invalidation</p>
+  </li>
+</ol>
+
+            <footer class="article-footer">
+    <div class="authorimage">
+        <img src="/assets/img/oliver-github.png" alt="My Avatar" class="img-circle">
+    </div>
+    <section class="author">
+        <h4><a href="/about.html">Oliver Deng</a></h4>
+        <a href="mailto:oliverdeng1005@gmail.com">oliverdeng1005@gmail.com</a>
+    </section>
+</footer>
+
+        </main>
+
+        <div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2019 Oliver Deng - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74743250-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+
+</html>

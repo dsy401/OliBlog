@@ -8,7 +8,7 @@
   <title>C# Upload File/Delete File</title>
   <meta name="description" content="These days, i have created some restful api based on uploading someone’s information including upload file or delete file from the cloud. So, i gonna share m...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/05/25/c-upload-filedelete-file.html">
+  <link rel="canonical" href="https://dsy401.github.io/2019/05/25/c-upload-filedelete-file.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -69,32 +69,7 @@
             </header>
             <p>These days, i have created some restful api based on uploading someone’s information including upload file or delete file from the cloud. So, i gonna share my method to upload or delete file from directory.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-</pre></td><td class="rouge-code"><pre><span class="k">protected</span> <span class="n">UploadFileModel</span> <span class="nf">UploadFile</span><span class="p">(</span><span class="n">IFormFile</span> <span class="n">file</span><span class="p">,</span><span class="kt">string</span> <span class="n">folderName</span><span class="p">,</span> <span class="kt">int</span> <span class="n">id</span><span class="p">,</span><span class="kt">string</span> <span class="n">strDateTime</span><span class="p">)</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">protected</span> <span class="n">UploadFileModel</span> <span class="nf">UploadFile</span><span class="p">(</span><span class="n">IFormFile</span> <span class="n">file</span><span class="p">,</span><span class="kt">string</span> <span class="n">folderName</span><span class="p">,</span> <span class="kt">int</span> <span class="n">id</span><span class="p">,</span><span class="kt">string</span> <span class="n">strDateTime</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="kt">var</span> <span class="n">model</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">UploadFileModel</span><span class="p">();</span>
             <span class="k">try</span>
@@ -119,21 +94,9 @@
                 <span class="k">return</span> <span class="n">model</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="k">protected</span> <span class="k">void</span> <span class="nf">DeleteFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">filePath</span><span class="p">)</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">protected</span> <span class="k">void</span> <span class="nf">DeleteFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">filePath</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="kt">var</span> <span class="n">folderName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="nf">Combine</span><span class="p">(</span><span class="s">"wwwroot"</span><span class="p">,</span> <span class="n">filePath</span><span class="p">);</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="nf">Exists</span><span class="p">(</span><span class="n">folderName</span><span class="p">))</span>
@@ -145,7 +108,7 @@
                 <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="p">(</span><span class="s">"Delete Fail"</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>These are Upload File/Delete File method written by myself, hope u guys can use it.</p>
 

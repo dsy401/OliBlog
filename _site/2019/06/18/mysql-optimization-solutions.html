@@ -8,7 +8,7 @@
   <title>MYSQL optimization solutions</title>
   <meta name="description" content="1.select the most suitable field attributeMySQL can support large data volumes very well, but in general, the smaller the table in the database, the faster t...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/06/18/mysql-optimization-solutions.html">
+  <link rel="canonical" href="https://dsy401.github.io/2019/06/18/mysql-optimization-solutions.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -75,27 +75,19 @@
 
 <p>MySQL supports SQL subqueries starting with 4.1. This technique can use a SELECT statement to create a single-column query result and then use that result as a filter in another query. For example, if we want to delete a customer who does not have any orders in the customer basic information table, we can use the sub-query to first take out all the customer IDs that have placed the order from the sales information table, and then pass the results to the main query, as shown below. :</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">SELECT</span>  <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">customerinfo</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>  <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">customerinfo</span>
 
 <span class="k">WHERE</span>  <span class="n">customerid</span>  <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">customerid</span> <span class="k">FROM</span> <span class="n">salesinfo</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>If you use join (JOIN).. to complete this query work, the speed will be much faster. Especially when the CustomerID is indexed in the salesinfo table, the performance will be better, the query is as follows:</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="k">SELECT</span>  <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">customerinfo</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>  <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">customerinfo</span>
 
 <span class="k">LEFT</span>  <span class="k">JOIN</span>  <span class="n">salesinfo</span> <span class="k">ON</span> <span class="n">customerinfo</span><span class="p">.</span><span class="n">customerid</span> <span class="o">=</span> <span class="n">salesinfo</span><span class="p">.</span><span class="n">customerid</span>
 
 <span class="k">WHERE</span> <span class="n">salesinfo</span><span class="p">.</span><span class="n">customerid</span> <span class="k">IS</span> <span class="k">NULL</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>JOIN: The reason why it is more efficient is that MySQL does not need to create temporary tables in memory to complete this logical two-step query.</p>
 
@@ -103,47 +95,33 @@
 
 <p>MySQL supports union queries starting with version 4.0, which can be used to merge two or more select queries that need to use temporary tables. At the end of the client’s query session, the temporary table will be automatically deleted, thus ensuring that the database is neat and efficient. When using union to create a query, we only need to use UNION as a keyword to connect multiple select statements. It should be noted that the number of fields in all select statements should be the same. The following example demonstrates a query using UNION.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="k">SELECT</span>  <span class="n">name</span><span class="p">,</span><span class="n">phone</span> <span class="k">FROM</span> <span class="n">client</span> <span class="k">UNION</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>  <span class="n">name</span><span class="p">,</span><span class="n">phone</span> <span class="k">FROM</span> <span class="n">client</span> <span class="k">UNION</span>
 
 <span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span><span class="n">birthdate</span> <span class="k">FROM</span>  <span class="n">author</span>  <span class="k">UNION</span>
 
 <span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span><span class="n">supplier</span> <span class="k">FROM</span> <span class="n">product</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <h3 id="4-transaction">4. Transaction</h3>
 
 <p>Although we can use Sub-Queries, JOIN, and UNION to create a variety of queries, not all database operations can be completed with just one or a few SQL statements. of. More often than not, a series of statements are needed to do something. But in this case, when a statement in this statement block runs incorrectly, the operation of the entire statement block becomes undefined. Imagine that you want to insert a piece of data into two associated tables at the same time. It may happen that after a successful update in the first table, the database suddenly has an unexpected condition, causing the operation in the second table to be incomplete. In this way, the data will be incomplete and even destroy the data in the database. To avoid this, you should use a transaction. Its purpose is: either each statement in the statement block succeeds or fails. In other words, it is possible to maintain the consistency and integrity of the data in the database. Things start with the BEGIN keyword and the COMMIT keyword ends. If a SQL operation fails between the two, then the ROLLBACK command will restore the database to the state it was in before BEGIN started.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="k">BEGIN</span><span class="p">;</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">BEGIN</span><span class="p">;</span>
   <span class="k">INSERT</span>   <span class="k">INTO</span>   <span class="n">salesinfo</span>   <span class="k">SET</span>   <span class="n">customerid</span><span class="o">=</span><span class="mi">14</span><span class="p">;</span>
   <span class="k">UPDATE</span>   <span class="n">inventory</span>   <span class="k">SET</span>   <span class="n">quantity</span> <span class="o">=</span><span class="mi">11</span>   <span class="k">WHERE</span>   <span class="n">item</span><span class="o">=</span><span class="s1">'book'</span><span class="p">;</span>
 <span class="k">COMMIT</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Another important role of a transaction is that when multiple users use the same data source at the same time, it can use the method of locking the database to provide a secure access mode for the user, so as to ensure that the user’s operation is not interfered by other users.</p>
 
 <h3 id="5-lock">5. Lock</h3>
 
-<p> </p>
-
 <p>Although transactions are a very good way to maintain database integrity, but because of its exclusivity, sometimes affect the performance of the database, especially in large applications. Since the database will be locked during the execution of the transaction, other user requests can only wait temporarily until the end of the transaction. If a database system has only a few users to use, the impact of the transaction will not become a big problem; but if there are thousands of users accessing a database system at the same time, such as accessing an e-commerce website, it will be generated. More serious response delays. In fact, in some cases we can get better performance by locking the table. The following example uses the method of locking the table to complete the function of the transaction in the previous example.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">LOCK</span> <span class="k">TABLE</span> <span class="n">inventory</span> <span class="k">WRITE</span> <span class="k">SELECT</span> <span class="n">quantity</span>  <span class="k">FROM</span>   <span class="n">inventory</span>   <span class="k">WHERE</span> <span class="n">Item</span><span class="o">=</span><span class="s1">'book'</span><span class="p">;</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">LOCK</span> <span class="k">TABLE</span> <span class="n">inventory</span> <span class="k">WRITE</span> <span class="k">SELECT</span> <span class="n">quantity</span>  <span class="k">FROM</span>   <span class="n">inventory</span>   <span class="k">WHERE</span> <span class="n">Item</span><span class="o">=</span><span class="s1">'book'</span><span class="p">;</span>
 <span class="p">...</span>
 <span class="k">UPDATE</span>   <span class="n">inventory</span>   <span class="k">SET</span>   <span class="n">Quantity</span><span class="o">=</span><span class="mi">11</span>   <span class="k">WHERE</span>  <span class="n">Item</span><span class="o">=</span><span class="s1">'book'</span><span class="p">;</span><span class="n">UNLOCKTABLES</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p> </p>
 

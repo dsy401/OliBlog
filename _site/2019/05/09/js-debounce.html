@@ -8,7 +8,7 @@
   <title>JS Debounce</title>
   <meta name="description" content="These days, i have created a scheduler for my school management system project, i have met the problem that evert time i click the next button to turn to nex...">
 
-  <link rel="canonical" href="http://localhost:4000/2019/05/09/js-debounce.html">
+  <link rel="canonical" href="https://dsy401.github.io/2019/05/09/js-debounce.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
@@ -71,18 +71,7 @@
 
 <p>There is the debounce source code written by myself</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">debounce</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">debounce</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">timeout</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">//timeout: null</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">timeout</span><span class="p">){</span> <span class="c1">//if timeout is not null</span>
         <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timeout</span><span class="p">)</span> <span class="c1">//clear timeout to null</span>
@@ -93,19 +82,15 @@
         <span class="p">},</span> <span class="nx">delay</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>How to use it?</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">method</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">method</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">()</span>
 <span class="nx">method</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
     <span class="c1">//your work</span>
 <span class="p">},</span> <span class="mi">500</span><span class="p">)</span> <span class="c1">//your custom delay microseconds</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>When i use the debounce, each time i click the button to turn to the next pgae, the system will not Immediately send the AJAX request to server. The AJAX request will be sent After the click action stops for your custom delay (microseconds).</p>
 
