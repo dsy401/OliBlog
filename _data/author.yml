@@ -1,5 +1,5 @@
 name: Oliver Deng
-title: Graduate Full Stack Developer
+title: IT Developer
 address: 'Auckland, New Zealand'
 email: oliverdeng1005@gmail.com
 github: dsy401
@@ -10,7 +10,7 @@ workHistory:
     location: Auckland
     title: Graduate Developer
     started: '2019'
-    duration: (03/2019 - present)
+    duration: (03/2019 - 09/2019)
     description: >-
       Full-stack developer for Auckland Music Academy management Project
       website:.gradspace.org:8888
@@ -33,6 +33,13 @@ workHistory:
       computer parts retail are this company's business scope. My main job for
       this position is managing and transferring data from Excel into the
       company’s database using Python.
+  - work1:
+    company: JM Ocean Avenue
+    location: Auckland
+    title: IT Developer
+    started: '2019'
+    duration: (09/2019- present)
+    description:
 educationHistory:
   - education1:
     organization: The University of Auckland
