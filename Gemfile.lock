@@ -59,6 +59,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine (~> 1.2.7)
   jekyll
   jekyll-paginate (~> 1.1.0)
   rake
